@@ -1,41 +1,4 @@
 /* Reset default browser margin/padding */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .menu-grid {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .menu-card {
-        width: 100%;
-        max-width: 350px;
-    }
-
-    .hamburger {
-        display: block;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 24px;
-        cursor: pointer;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -234,4 +197,42 @@ footer h2 {
 footer a {
     color: #d8f3dc;
     text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menu-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+    
 }
