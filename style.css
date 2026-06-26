@@ -1,3 +1,164 @@
+/* Reset default browser margin/padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* knp ada dua angka berbeda di padding? angka pertama buat ngatur atas sama bawahnya kalao yang kedua buat kanan sama kirinya */
+    padding: 16px 32px;
+    background-color: green;
+}
+
+nav ul {
+    /* pake list-style buat ngilangin bullet point */
+    list-style: none;
+    display: flex;
+    gap: 24px; 
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* button disini */
+.btn {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+    padding: 8px 20px;
+    border-radius: 20px;
+}
+
+.btn-hero {
+  display: inline-block;
+  margin-top: 24px;
+  background-color: #1b4332;
+  color: white;
+  padding: 12px 32px;
+  border-radius: 25px;
+  font-size: 16px;
+}
+
+/* bagian hero */
+#hero {
+    text-align: center;
+    padding: 80px 32px;
+    background-color: #52b788;
+}
+
+#hero h1 {
+    font-size: 48px;
+    margin-bottom: 16px;
+    color: #1b4332;
+}
+
+#hero p {
+    font-size: 18px;
+    color: #2d6a4f;
+}
+
+/* bagian tujuan dari menu planner */
+#about {
+    padding: 60px 32px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+#about h2 {
+    font-size: 32px;
+    color: #1b4332;
+    margin-bottom: 16px;
+}
+
+#about p {
+    font-size: 16px;
+    color: #555;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* bagian menu faborit */
+#menu-favorit {
+    padding: 60px 32px;
+    text-align: center;
+    background-color: #ffff;
+}
+
+#menu-favorit h2 {
+    font-size: 28px;
+    color: #1b4332;
+    margin-bottom: 32px;
+}
+
+.menu-grid {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
+.menu-card {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 16px;
+    width: 250px;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu-card h3 {
+    margin-top: 12px;
+    color: #1b4332;
+}
+
+.menu-card p {
+    color: #555;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* bagian coba sekarang */
+
+#cobasekarang {
+    padding: 60px 32px;
+    text-align: center;
+    background-color: #d8f3dc;
+}
+
+#cobasekarang h2 {
+    font-size: 28px;
+    color: #1b4332;
+    margin-bottom: 16px;
+}
+
 .fitur-card {
-    
+    background-color: white;
+    border-radius: 12px;
+    padding: 32px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.fitur-card h3 {
+    color: #1b4332;
+    margin-bottom: 8px;
+}
+
+.fitur-card p {
+    color: #555;
+    margin-bottom: 16px;
 }
