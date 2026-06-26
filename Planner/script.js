@@ -289,6 +289,12 @@ function updateHasil() {
   document.getElementById("total-kalori").textContent = totalKal + " kkal";
   document.getElementById("total-harga").textContent = "Rp " + totalHarga.toLocaleString("id-ID");
 
+  var badge = document.getElementById("cart-badge");
+  if (badge) {
+    badge.textContent = menuDipilih.length;
+    badge.className = "cart-badge" + (menuDipilih.length === 0 ? " kosong" : "");
+  }
+
   var kategoriList = ["Makanan Pokok", "Lauk-Pauk", "Sayur", "Buah", "Minuman"];
   var semuaOk = true;
   kategoriList.forEach(function(kat) {
@@ -301,6 +307,12 @@ function updateHasil() {
 
   document.getElementById("badge-seimbang").style.display =
     (semuaOk && menuDipilih.length > 0) ? "block" : "none";
+}
+
+// MOBILE DROPDOWN TOGGLE (panel-kanan)
+function toggleHasil() {
+  document.getElementById("panel-kanan").classList.toggle("tampil");
+  document.getElementById("backdrop-hasil").classList.toggle("tampil");
 }
 
 // FILTER

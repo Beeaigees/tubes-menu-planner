@@ -11,7 +11,7 @@
   <nav class="navbar">
     <div class="logo">Nutri<span>Plan</span></div>
     <ul class="nav-links">
-      <li><a href="index.html">Beranda</a></li>
+      <li><a href="/tubes-menu-planner/Landing_Page/index.html">Beranda</a></li>
       <li><a href="planner.html" class="btn-aktif">Planner</a></li>
     </ul>
   </nav>
@@ -34,8 +34,11 @@
       <div class="card-grid" id="card-grid"></div>
     </div>
 
-    <div class="panel-kanan">
-      <h3>&#128722; Hasil Pilihan</h3>
+    <div class="panel-kanan" id="panel-kanan">
+      <div class="panel-kanan-head">
+        <h3>&#128722; Hasil Pilihan</h3>
+        <button class="btn-tutup-hasil" onclick="toggleHasil()">Tutup &#10005;</button>
+      </div>
 
       <div class="grid-gambar" id="grid-gambar">
         <div class="state-kosong" id="state-kosong">
@@ -71,6 +74,12 @@
       </div>
     </div>
   </div>
+
+  <!-- Mobile-only: opens "Hasil Pilihan" as a dropdown panel -->
+  <button class="btn-cart-mobile" id="btn-cart-mobile" onclick="toggleHasil()" aria-label="Lihat hasil pilihan">
+    &#128722;<span class="cart-badge kosong" id="cart-badge">0</span>
+  </button>
+  <div class="backdrop-hasil" id="backdrop-hasil" onclick="toggleHasil()"></div>
 
   <div class="overlay" id="overlay" onclick="tutupModal(event)">
     <div class="modal">
