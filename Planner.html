@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Planner — NutriPlan</title>
+  <link rel="stylesheet" href="planner.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Nutri<span>Plan</span></div>
+    <ul class="nav-links">
+      <li><a href="index.html">Beranda</a></li>
+      <li><a href="planner.html" class="btn-aktif">Planner</a></li>
+    </ul>
+  </nav>
+
+  <div class="wrapper">
+
+    <div class="panel-kiri">
+      <h2>Pilih Menu Harianmu</h2>
+      <p class="subjudul">Klik <strong>+</strong> untuk menambah · Klik <strong>Lihat Detail</strong> untuk info kalori</p>
+
+      <div class="filter-wrap">
+        <button class="btn-filter aktif" onclick="filterKategori('Semua', this)">Semua</button>
+        <button class="btn-filter" onclick="filterKategori('Makanan Pokok', this)">Makanan Pokok</button>
+        <button class="btn-filter" onclick="filterKategori('Lauk-Pauk', this)">Lauk-Pauk</button>
+        <button class="btn-filter" onclick="filterKategori('Sayur', this)">Sayur</button>
+        <button class="btn-filter" onclick="filterKategori('Buah', this)">Buah</button>
+        <button class="btn-filter" onclick="filterKategori('Minuman', this)">Minuman</button>
+      </div>
+
+      <div class="card-grid" id="card-grid"></div>
+    </div>
+
+    <div class="panel-kanan">
+      <h3>&#128722; Hasil Pilihan</h3>
+
+      <div class="grid-gambar" id="grid-gambar">
+        <div class="state-kosong" id="state-kosong">
+          <span>&#127869;</span>
+          Belum ada menu dipilih
+        </div>
+      </div>
+
+      <div class="jumlah" id="jumlah"></div>
+
+      <div class="info-total" id="info-total" style="display:none">
+        <div class="info-baris">
+          <span>&#128293; Total Kalori</span>
+          <strong id="total-kalori">0 kkal</strong>
+        </div>
+        <div class="info-baris">
+          <span>&#128184; Total Harga</span>
+          <strong id="total-harga">Rp 0</strong>
+        </div>
+      </div>
+
+      <div class="label-sek">KELENGKAPAN GIZI</div>
+      <div class="cek-list">
+        <div class="cek-baris"><span>&#127834; Makanan Pokok</span><span class="cek-status belum" id="cek-Makanan Pokok">Belum</span></div>
+        <div class="cek-baris"><span>&#127831; Lauk-Pauk</span><span class="cek-status belum" id="cek-Lauk-Pauk">Belum</span></div>
+        <div class="cek-baris"><span>&#129388; Sayur</span><span class="cek-status belum" id="cek-Sayur">Belum</span></div>
+        <div class="cek-baris"><span>&#127822; Buah</span><span class="cek-status belum" id="cek-Buah">Belum</span></div>
+        <div class="cek-baris"><span>&#129380; Minuman</span><span class="cek-status belum" id="cek-Minuman">Belum</span></div>
+      </div>
+
+      <div class="badge-seimbang" id="badge-seimbang" style="display:none">
+        &#129367; Menu Seimbang!
+      </div>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" onclick="tutupModal(event)">
+    <div class="modal">
+      <div class="modal-kiri">
+        <img id="modal-gambar" src="" alt="" />
+      </div>
+      <div class="modal-kanan">
+        <div class="modal-nama" id="modal-nama"></div>
+        <div id="modal-badge"></div>
+        <div class="modal-desc" id="modal-desc"></div>
+        <div class="modal-prep-row">
+          <div><strong id="m-prep"></strong><span>Prep</span></div>
+          <div><strong id="m-cook"></strong><span>Cook</span></div>
+          <div><strong id="m-porsi"></strong><span>Sajian</span></div>
+        </div>
+        <div class="modal-kalori-blok">
+          <div class="kal-angka" id="m-kalori"></div>
+          <div class="kal-label">KALORI</div>
+          <div class="kal-makro" id="m-makro"></div>
+        </div>
+        <div class="modal-harga" id="m-harga"></div>
+        <div class="modal-tombol">
+          <button class="btn-tutup" onclick="tutupModal()">Tutup</button>
+          <button class="btn-tambah" id="btn-tambah" onclick="tambahDariModal()">+ Tambah</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
