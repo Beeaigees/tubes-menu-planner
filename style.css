@@ -1,8 +1,49 @@
 /* Reset default browser margin/padding */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .menu-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .hamburger {
+        display: block;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.hamburger {
+    display: none;
 }
 
 body {
@@ -16,6 +57,15 @@ header {
     /* knp ada dua angka berbeda di padding? angka pertama buat ngatur atas sama bawahnya kalao yang kedua buat kanan sama kirinya */
     padding: 16px 32px;
     background-color: green;
+}
+
+#quote {
+    color: white;
+}
+
+.logo {
+    color: white;
+    font-size: 16px;
 }
 
 nav ul {
@@ -161,4 +211,27 @@ nav a {
 .fitur-card p {
     color: #555;
     margin-bottom: 16px;
+}
+
+.fitur-card a {
+    background-color: #1b4332;
+    color: white;
+}
+
+/* bagian footer */
+
+footer {
+    padding: 32px;
+    text-align: center;
+    background-color: #1b4332;
+    color: white;
+}
+
+footer h2 {
+    margin-bottom: 8px;
+}
+
+footer a {
+    color: #d8f3dc;
+    text-decoration: none;
 }
