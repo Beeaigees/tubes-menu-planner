@@ -201,8 +201,21 @@ footer a {
 
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 12px;
+    }
+    
+    .logo {
+        font-size: 14px;
+        white-space: nowrap;
+    }
+
+    #quote {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
     }
 
     .menu-grid {
@@ -216,6 +229,7 @@ footer a {
     }
 
     .hamburger {
+        margin-left: auto;
         display: block;
         background: none;
         border: none;
